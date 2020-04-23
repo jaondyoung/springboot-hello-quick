@@ -1,0 +1,36 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /book # 指定项目路径名
+
+
+person:
+  lastName: 张三${random.int}
+  lists:
+    - list
+    - wangwu
+  maps: {k1: v1,k2: v2}
+  dog:
+    name: xiaogou${person.hello:hello}
+    age: 12
+
+spring:
+  profiles:
+    active: prod
+
+# yml多文档间隔符
+debug: true
+---
+server:
+  port: 8083
+spring:
+  profiles: dev1
+
+---
+server:
+  port: 8084
+spring:
+  profiles: prod
+
+
