@@ -11,6 +11,7 @@ public class HelloController {
     @ResponseBody
     public String hello(){
         System.out.println("更新代码");
+        System.out.println("dev分支添加代码");
         return "hello quick";
     }
 }
